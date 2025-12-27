@@ -1,0 +1,210 @@
+/* frontend/src/components/ProgressReports/DietTracking.module.css */
+
+.container {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Calorie Card */
+.calorieCard {
+  padding: 16px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 12px;
+  border: 1px solid #fbbf24;
+}
+
+.calorieHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.calorieLabel {
+  font-size: 14px;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.calorieValue {
+  font-size: 20px;
+  color: #78350f;
+  font-weight: 700;
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* Nutrition Grid */
+.nutritionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.nutritionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.nutritionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nutritionLabel {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.nutritionValue {
+  font-size: 18px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.nutritionBar {
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.nutritionFill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.nutritionGoal {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* Water Card */
+.waterCard {
+  padding: 16px;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-radius: 12px;
+  border: 1px solid #93c5fd;
+}
+
+.waterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.waterTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.waterValue {
+  font-size: 16px;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.waterGlasses {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.glass {
+  font-size: 28px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.glassFilled {
+  opacity: 1;
+  filter: grayscale(0%);
+  animation: fillGlass 0.3s ease;
+}
+
+@keyframes fillGlass {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .nutritionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .waterGlasses {
+    gap: 8px;
+  }
+
+  .glass {
+    font-size: 24px;
+  }
+}
